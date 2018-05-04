@@ -12,10 +12,11 @@ with open("twitter_credentials.json", "r") as file:
     
 class FileWriteListener(StreamListener):
     
-    # Returns a "FileWriteListener" object
+     # Returns a StreamListener object
     def __init__(self):
         # Refers to "FileWriteListener" class implicitly
         super().__init__()
+        # writes tweets to 'tweets.json' with append
         self.save_file = open('tweets.json','a')
         self.tweets = []
 
